@@ -1,3 +1,7 @@
+// drawarrow.js is a package writtent by Gildas Carlin
+// draw an arrow
+//
+
 function drawArrow(x0, y0, x1, y1, c = color('rgba(236,90,43,0.8)')){
   let L = sqrt((x1-x0)**2+(y1-y0)**2);
   let theta = atan2(y1-y0, x1-x0);
