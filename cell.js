@@ -1,3 +1,6 @@
+// cell.js is a package writtent by Gildas Carlin
+// class cell
+//
 
 class Cell {
   constructor() { 
