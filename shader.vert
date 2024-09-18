@@ -1,3 +1,7 @@
+// shader.vert is a package writtent by Gildas Carlin
+// visualization
+//
+
 #ifdef GL_ES
 
 precision mediump float;
