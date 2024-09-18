@@ -1,3 +1,6 @@
+// pathmaker.js is a package writtent by Gildas Carlin
+// draw trajectories
+//
 
 // A Path is a list of particles
 class Path {
