@@ -1,4 +1,4 @@
-// cell.js is a package writtent by Gildas Carlin
+// cell.js is a package writtent by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // class cell
 //
 
