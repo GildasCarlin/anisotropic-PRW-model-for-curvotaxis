@@ -7,9 +7,7 @@ function surface_height(pos){
   let x = pos.x;
   let y = pos.y;
 
-  if (surface == 'flat'){  
-    // do nothing
-  } else if (surface == 'right_sinus'){  
+  if (surface == 'right_sinus'){  
     h = a*sin(k*(y+phi0));
   } 
   return h;
@@ -20,20 +18,18 @@ function substrateDerivative(pos){
   let y = pos.y;
 
   // derivees de l'equation du substrat (2D)
-  let [fx, fxx, fxxx, fy, fyy, fyyy, fxy, fxxy, fxyy] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
+  let [fx, fy, fxx, fxy, fyy, fxxx, fxxy, fyyy, fyyx, fxyx, fxyy] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
   
-  if (surface == 'flat'){  
-    // do nothing
-  } else if (surface == 'right_sinus'){  
+  if (surface == 'right_sinus'){  
     fy = a*k*cos(k*y+phi0);
     fyy = -1.0*a*k**2.0*sin(k*y+phi0);
     fyyy = -1.0*a*k**3.0*cos(k*y+phi0);
   }  
-  return [fx, fxx, fxxx, fy, fyy, fyyy, fxy, fxxy, fxyy];
+  return [fx, fy, fxx, fxy, fyy, fxxx, fxxy, fyyy, fyyx, fxyx, fxyy];
 }
 
 function curvature_tensor(pos){
-  let [hx, hxx, hxxx, hy, hyy, hyyy, hxy, hxxy, hxyy] = substrateDerivative(pos);
+  let [hx, hy, hxx, hxy, hyy, hxxx, hxxy, hyyy, hyyx, hxyx, hxyy] = substrateDerivative(pos);
 
   let gxx = 1.0+hx**2.0;  
   let gxy = hx*hy;
