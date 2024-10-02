@@ -49,17 +49,19 @@ function curvature_tensor(pos){
 }
 
 function gradCurvature(pos){
-  let [hx, hxx, hxxx, hy, hyy, hyyy, hxy, hxxy, hxyy] = substrateDerivative(pos);  
-  let [g, gxx, gxy, gyy, Kxx, Kxy, Kyy] = curvature_tensor(pos);
-  
-  // gradient of mean curvature
-  let Hx = -1.0*(2.0*hy*hxy*hxx+gyy*hxxx) + 2.0*(gxy*hxxy+hxy*(hxx*hy+hxy*hx)) - (2.0*hx*hyy*hxx+gxx*hxyy);
-  Hx = Hx/(2.0*g**(3.0/2.0));
-  Hx += 3.0*(hxx*hx+hxy*hy)*(gyy*hxx-2.0*gxy*hxy+gxx*hyy)/(2.0*g**(5.0/2.0));
+  let [hx, hy, hxx, hxy, hyy, hxxx, hxxy, hyyy, hyyx, hxyx, hxyy] = surfaceDerivative(pos);  
+  let u = hxx*(1+hy**2.0)+hyy*(1+hx**2.0)-2.0*hxy*hx*hy;
+  let v = 2.0*(1.0+hx**2.0+hy**2.0)**1.5;
 
-  let Hy = -1.0*(2.0*hy*hyy*hxx+gyy*hxxy) + 2.0*(gxy*hxyy+hxy*(hxy*hy+hyy*hx)) - (2.0*hx*hxy*hyy+gxx*hyyy);
-  Hy = Hx/(2.0*g**(3.0/2.0));
-  Hy += 3.0*(hxy*hx+hyy*hy)*(gyy*hxx-2.0*gxy*hxy+gxx*hyy)/(2.0*g**(5.0/2.0));
+  // gradient of mean curvature
+  let ux = hxxx*(1+hy**2.0)+hyyx*(1+hx**2.0)+2.0*(hxx*hxy*hy+hyy*hxx*hx)-2.0*(hxyx*hx*hy+hxy*(hxx*hy+hx*hxy));
+  let vx = 6.0*(hxx*hx+hxy*hy)*(1.0+hx**2.0+hy**2.0)**0.5;
+  let Hx = (ux*v - u*vx)/v**2.0;
+
+  let uy = hxxy*(1+hy**2.0)+hyyy*(1+hx**2.0)+2.0*(hxx*hyy*hy+hyy*hxy*hx)-2.0*(hxyy*hx*hy+hxy*(hxy*hy+hx*hyy));
+  let vy = 6.0*(hxy*hx+hyy*hy)*(1.0+hx**2.0+hy**2.0)**0.5;
+  let Hy = (uy*v - u*vy)/v**2.0;
+
   return createVector(Hx, Hy);
 }
 
