@@ -1,4 +1,4 @@
-// curvature.js is a package writtent by Gildas Carlin
+// curvature.js is a package writtent by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // analytical results for curvature measurements
 //
 
