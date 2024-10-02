@@ -49,7 +49,7 @@ function curvature_tensor(pos){
 }
 
 function gradCurvature(pos){
-  let [hx, hy, hxx, hxy, hyy, hxxx, hxxy, hyyy, hyyx, hxyx, hxyy] = surfaceDerivative(pos);  
+  let [hx, hy, hxx, hxy, hyy, hxxx, hxxy, hyyy, hyyx, hxyx, hxyy] = substrateDerivative(pos);  
   let u = hxx*(1+hy**2.0)+hyy*(1+hx**2.0)-2.0*hxy*hx*hy;
   let v = 2.0*(1.0+hx**2.0+hy**2.0)**1.5;
 
