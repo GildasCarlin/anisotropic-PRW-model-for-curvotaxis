@@ -1,4 +1,4 @@
-// sketch.js is a package writtent by Gildas Carlin
+// sketch.js is a package writtent by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // Main
 //
 
