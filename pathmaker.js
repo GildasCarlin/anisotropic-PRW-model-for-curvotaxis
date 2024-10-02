@@ -1,4 +1,4 @@
-// pathmaker.js is a package writtent by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
+// pathmaker.js is a package written by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // draw trajectories
 //
 
