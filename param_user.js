@@ -1,5 +1,5 @@
 ///////////////////////////////////////////
-// param_user is a package developed by Gildas Carlin 
+// param_user is a package developed by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // user interface to interact with the model
 
 
