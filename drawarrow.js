@@ -1,4 +1,4 @@
-// drawarrow.js is a package writtent by Gildas Carlin
+// drawarrow.js is a package writtent by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // draw an arrow
 //
 
