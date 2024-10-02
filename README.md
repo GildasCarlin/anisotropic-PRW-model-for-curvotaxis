@@ -3,7 +3,7 @@
 This repository contains the files necessary to run the anisotropic persistence random walk (PRW) model for curvotaxis.
 The study can be found at $$DOI$$
 
-The code was developed by Gildas Carlin and Ian Manifacier.
+The code was developed by Gildas Carlin, Ian Manifacier and Jean-Louis Milan.
 
 
 
