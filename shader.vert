@@ -1,4 +1,4 @@
-// shader.vert is a package writtent by Gildas Carlin
+// shader.vert is a package written by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
 // visualization
 //
 
