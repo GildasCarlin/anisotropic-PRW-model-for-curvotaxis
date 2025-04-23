@@ -4,6 +4,7 @@ This repository contains the files necessary to run the anisotropic persistence 
 The study can be found at $$DOI$$
 
 The code was developed by Gildas Carlin, Ian Manifacier and Jean-Louis Milan.
+The study was conducted by Gildas Carlin, Ian Manifacier, Dang Khoa Cao, Laurent Pieuchot, Valeriy Luchnikov, Jean-Louis Milan
 
 
 
