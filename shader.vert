@@ -1,5 +1,10 @@
-// shader.vert is a package written by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
-// visualization
+/**
+ * File              : shader.vert
+ * Original article  : doi
+ * Authors           : Gildas Carlin, Ian Manifacier and Jean-Louis Milan
+ * Date              : 05/05/2025
+ * Description       : Color gestion for background sketch.
+ */
 //
 
 #ifdef GL_ES
