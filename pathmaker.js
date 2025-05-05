@@ -1,5 +1,10 @@
-// pathmaker.js is a package written by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
-// draw trajectories
+/**
+ * File              : pathmaker.js
+ * Original article  : doi
+ * Authors           : Gildas Carlin, Ian Manifacier and Jean-Louis Milan
+ * Date              : 05/05/2025
+ * Description       : A class for trajectory sketch.
+ */
 //
 
 // A Path is a list of particles
