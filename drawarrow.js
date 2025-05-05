@@ -1,5 +1,10 @@
-// drawarrow.js is a package written by Gildas Carlin, Ian Manifacier and Jean-Louis Milan
-// draw an arrow
+/**
+ * File              : drawarrow.js
+ * Original article  : doi
+ * Authors           : Gildas Carlin, Ian Manifacier and Jean-Louis Milan
+ * Date              : 05/05/2025
+ * Description       : Draw arrow for vector sketch.
+ */
 //
 
 function drawArrow(x0, y0, x1, y1, c = color('rgba(236,90,43,0.8)')){
