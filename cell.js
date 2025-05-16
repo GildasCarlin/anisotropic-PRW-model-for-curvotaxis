@@ -34,7 +34,7 @@ class Cell {
     this.update();
 
     // 3.cell is restrained in the window (visual only)
-    this.borders();
+    //this.borders();
 
     // 4.sketch
     this.render();    
@@ -68,7 +68,7 @@ class Cell {
       if (!test){
         gradH_perp.mult(-1.0);
       } 
-      let Dtheta = this.velocity.angleBetween(gradH_perp) * delta; 
+      let Dtheta = this.velocity.angleBetween(gradH_perp) * alpha; 
       let normalized_velocity = Normalize_Vec(this.velocity.copy());
       let costheta = normalized_velocity.x;
       let sintheta = normalized_velocity.y;
@@ -166,7 +166,7 @@ class Cell {
     row.push(this.Sx);
     row.push(this.Sy);
     row.push(gamma);
-    row.push(delta);
+    row.push(alpha);
     row.push([this.real_position.x]);
     row.push([this.real_position.y]);
     row.push([this.velocity.x]);
