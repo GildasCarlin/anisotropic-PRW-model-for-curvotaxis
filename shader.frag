@@ -13,16 +13,9 @@ precision mediump float;
 
 #endif
 
-uniform vec2 u_resolution;
 uniform int surface;
 uniform float k;
 uniform float window_size;
-
-vec3 hsb2rgb(vec3 c){
-    vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
-    vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
-    return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
-}
 
 float surface_equation(float x, float y){
   float m = 0.0;
@@ -34,15 +27,10 @@ float surface_equation(float x, float y){
 }
 
 void main() {
-  // The .xy notation applies the same operation on both x and y components
-  vec2 st = gl_FragCoord.xy/u_resolution.xy; 
-  
-  // Make a blue color. In shaders, the RGB color goes from 0 - 1 instead of 0 - 255
+  // In shaders, the RGB color goes from 0 - 1 instead of 0 - 255
   
   // Use the x position of the pixel to define its hue
   // (with saturation and brightness to 1)
-  // Then convert the HSB color to RGB
-  // vec3 color = hsb2rgb(vec3(st.x, 1, 1));
   
   // Color the pixel
 
