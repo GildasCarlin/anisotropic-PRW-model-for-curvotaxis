@@ -28,21 +28,21 @@ let lambda = 80.0;
 // cells number
 let nbCell = 1;
 
-// gamma and delta parameters which depends with curvature
+// gamma and alpha parameters which depends with curvature
 let gamma = 40.0;
-let delta = 0.0;
+let alpha = 0.0;
 if (lambda==20.0){  
     gamma=180.0;
-    delta=0.5;
+    alpha=0.5;
 } else if (lambda==40.0){ 
     gamma=50.0;
-    delta=0.4;
+    alpha=0.4;
 }  else if (lambda==80.0){  
     gamma=70.0;
-    delta=0.35;
+    alpha=0.35;
 } else if (lambda==160.0){ 
     gamma=50.0;
-    delta=0.0;
+    alpha=0.0;
 }
 
 // cell shape (visual only)
@@ -75,28 +75,4 @@ let draw_traj = false;
 let screen = false;
 let captureLength = 3000;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let mecanism = 'passiv';  // passiv ou activ
-
-
-
-//let drawing = false;
-let incrX = 30;
 
