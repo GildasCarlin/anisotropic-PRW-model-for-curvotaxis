@@ -188,7 +188,7 @@ function initTable(){
   row0.push(['Sx']);
   row0.push(['Sy']);
   row0.push(['gamma']);
-  row0.push(['delta']);
+  row0.push(['alpha']);
   row0.push(['x']);
   row0.push(['y']);
   row0.push(['vx']);
