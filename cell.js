@@ -1,7 +1,7 @@
 
 /**
  * File              : cell.js
- * Original article  : doi
+ * Original article  : doi: 10.1038/s41598-025-02804-3
  * Authors           : Gildas Carlin, Ian Manifacier and Jean-Louis Milan
  * Date              : 05/05/2025
  * Description       : Cell class for simulation.
@@ -32,9 +32,6 @@ class Cell {
 
     // 2.update cell velocity and position 
     this.update();
-
-    // 3.cell is restrained in the window (visual only)
-    //this.borders();
 
     // 4.sketch
     this.render();    
@@ -91,22 +88,6 @@ class Cell {
     let num2 = Math.sqrt(-2.0*Math.log(u)) * Math.sin(2.0*Math.PI*v);
     
     return createVector(num1, num2);
-  }
-  
-  // 3.cell is restrained in the window
-  borders() {
-    if (this.window_position.x < -width/2 -cell_radius_min) this.window_position.x = width/2 + cell_radius_min;
-    if (this.window_position.y < -height/2 -cell_radius_min) this.window_position.y = height/2 + cell_radius_min;
-    if (this.window_position.x > width/2 + cell_radius_min) this.window_position.x = -cell_radius_min -width/2;
-    if (this.window_position.y > height/2 + cell_radius_min) this.window_position.y = -cell_radius_min -height/2;
-  }
-
-  isInBorders() { //is the cell inside the window?
-    if (this.window_position.x < -width/2 || this.window_position.y < -height/2 || this.window_position.x >  width/2 || this.window_position.y >  height/2){
-      return false;
-    } else {
-      return true;
-    }
   }
   
   // 4.sketch
