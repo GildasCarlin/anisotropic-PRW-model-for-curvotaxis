@@ -1,6 +1,6 @@
 /**
  * File              : pathmaker.js
- * Original article  : doi
+ * Original article  : doi: 10.1038/s41598-025-02804-3
  * Authors           : Gildas Carlin, Ian Manifacier and Jean-Louis Milan
  * Date              : 05/05/2025
  * Description       : A class for trajectory sketch.
